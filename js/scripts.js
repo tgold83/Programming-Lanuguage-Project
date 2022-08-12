@@ -6,14 +6,6 @@ function hideResults() {
   document.getElementById("c#").setAttribute("class", "hidden");
 }
 
-function handleRadio(event) {
-  event.preventDefault();
-}
-
-window.addEventListener("load", function() {
-  document.getElementById("userInfo").addEventListener("submit", handleRadio);
-});
-
 window.onload = function() {
   hideResults();
 
@@ -26,11 +18,11 @@ window.onload = function() {
     const movieGenre = document.querySelector("input[name='movieGenre']:checked").value;
     const fav = document.querySelector("input[name='season']:checked").value;
 
-      if (holdBreath >= 20 || favColor === "warmColor") {
+      if (holdBreath >= 40 || favColor === "warmColor") {
         document.getElementById("c#").removeAttribute("class");
-      } else if (holdBreath < 20) {
+      } else if (20 <= holdBreath < 40) {
         document.getElementById("ruby").removeAttribute("class");
-      } else if (favSeason === "fall") {
+      } else if (holdBreath < 20 || favSeason === "fall") {
         document.getElementById("javaScript").removeAttribute("class");
       }
   }
