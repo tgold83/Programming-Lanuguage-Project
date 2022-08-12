@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <link href="css/bootstrap.css" rel ="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/scripts.js"></script>
   <title>Programming Language Selector</title>
 </head>
 <body>
-  <div>
-    <h1>Ready to Learn a Programming Language?</h1>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Ready to Learn a Programming Language?</h1><br>
+      <h3>We are here to help you decide which programming language is the right fit for you! <br> Answer a few questions about yourself and let our algorithm do the rest!</h3><br>
+    </div>
 
-    <h3>We are here to help you decide which programming language is the right fit for you! <br> Answer a few questions about yourself and let our algorithm do the rest!</h3>
-
-    <form id="userInfo">
-      <label for="holdBreath"><strong>How many seconds can you hold your breath for underwater? (enter a number)</strong></label>
+    <form id="userInfo" class="shadow p-3 mb-5 bg-white rounded">
+      <label for="holdBreath" ><strong>How many seconds can you hold your breath for underwater? (enter a number)</strong></label>
       <input id="holdBreath" type="text" name="breath"><br><br>
-      <label for="favColor"><strong>What is your favorite color?</strong></label><br><br>
-      <label>
+      <label for="favColor"><strong>What is your favorite color?</strong></label><br>
+      <label class="bg-warning text-danger font-weight-bold">
         <input type="radio" id="warmColor" type="text" name="favColor" value="warmColor" checked>
-        Red, Orange, or Yellow
+        Red, Orange, or Yellow .
       </label><br>
-      <label>
+      <label class="bg-primary text-white">
         <input type="radio" id="coolColor" type="text" name="favColor" value="coolColor">
-        Blue, Green, or Purple
+        Blue, Green, or Purple .
       </label><br>
-      <label>
+      <label class="bg-dark text-white" class="text-danger">
         <input type="radio" id="altColor" type="text" name="favColor" value="altColor">
-        Black, White, or Rainbow
+        Black, White, or Rainbow .
       </label><br>
       <br><br>
-      <label for="morningOrNight"><strong>Are you a morning person, or a night person?</strong></label><br><br>
+      <label for="morningOrNight"><strong>Are you a morning person, or a night person?</strong></label><br>
       <label>
         <input type="radio" id="morning" type="text" name="morningOrNight" value="morning" checked>
         Morning Person
@@ -38,7 +40,7 @@
         Night Person
       </label><br>
       <br><br>
-      <label for="movieGenre"><strong>What is your favorite genre of movie?</strong></label><br><br>
+      <label for="movieGenre"><strong>What is your favorite genre of movie?</strong></label><br>
       <label>
         <input type="radio" id="horrorThriller" type="text" name="movieGenre" value="horrorThriller" checked>
         Horror/Thriller
@@ -52,7 +54,7 @@
         Drama
       </label><br>
       <br><br>
-      <label for="favSeason"><strong>What is your favorite season?</strong></label><br><br>
+      <label for="favSeason"><strong>What is your favorite season?</strong></label><br>
       <label>
         <input type="radio" id="fall" type="text" name="season" value="fall" checked>
         Fall
@@ -69,7 +71,7 @@
         <input type="radio" id="summer" type="text" name="season" value="summer">
         Summer
       </label><br><br>
-      <button type="submit">Show me what language to learn!</button>
+      <button type="submit" class="bg-dark text-white">Click here to see what language to learn!</button><br><br>
     </form>
 
     <div id="javaScript" class="hidden">
