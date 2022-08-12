@@ -1,10 +1,9 @@
 // User Interface Logic
 
 function hideResults() {
-  document.getElementById("swings").setAttribute("class", "hidden");
-  document.getElementById("coaster").setAttribute("class", "hidden");
-  document.getElementById("tower").setAttribute("class", "hidden");
-  document.getElementById("sorry").setAttribute("class", "hidden");
+  document.getElementById("javaScript").setAttribute("class", "hidden"); //swings
+  document.getElementById("ruby").setAttribute("class", "hidden"); //coaster
+  document.getElementById("c#").setAttribute("class", "hidden"); //tower
 }
 
 window.onload = function() {
