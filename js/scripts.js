@@ -6,17 +6,25 @@ function hideResults() {
   document.getElementById("c#").setAttribute("class", "hidden"); //tower
 }
 
+function handleRadio(event) {
+  event.preventDefault();
+  const favColor = document.querySelector("input[name='favColor']:checked").value;
+  const morningOrNight = document.querySelector("input[name='morningOrNight']:checked").value;
+  const movieGenre = document.querySelector("input[name='movieGenre']:checked").value;
+  const fav = document.querySelector("input[name='season']:checked").value;
+}
+
+window.addEventListener("load", function() {
+  document.getElementById("userInfo").addEventListener("submit", handleRadio);
+});
+
 window.onload = function() {
   hideResults();
 
   document.querySelector("form").onsubmit = function(event) {
     event.preventDefault();
     hideResults();
-    const favColor = parseInt(document.querySelector("input#favColor").value);
     const holdBreath = parseInt(document.querySelector("input#holdBreath").value);
-    const morningOrNight = parseInt(document.querySelector("input#morningOrNight").value);
-    const movieGenre = parseInt(document.querySelector("input#movie").value);
-    const favSeason = parseInt(document.querySelector("input#season").value);
 
     // if (age && height) {
     //   if (age >= 12 && height >= 60) {
