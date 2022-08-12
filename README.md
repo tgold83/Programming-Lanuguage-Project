@@ -39,7 +39,7 @@ It is supposed to whimsical in the sense that the questions don't really pertain
 
 ## License
 
-_{MIT License
+_MIT License
 
 Copyright (c) [2022] [Ted Gold]
 
