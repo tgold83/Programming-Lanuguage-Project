@@ -1,17 +1,13 @@
 // User Interface Logic
 
 function hideResults() {
-  document.getElementById("javaScript").setAttribute("class", "hidden"); //swings
-  document.getElementById("ruby").setAttribute("class", "hidden"); //coaster
-  document.getElementById("c#").setAttribute("class", "hidden"); //tower
+  document.getElementById("javaScript").setAttribute("class", "hidden");
+  document.getElementById("ruby").setAttribute("class", "hidden");
+  document.getElementById("c#").setAttribute("class", "hidden");
 }
 
 function handleRadio(event) {
   event.preventDefault();
-  const favColor = document.querySelector("input[name='favColor']:checked").value;
-  const morningOrNight = document.querySelector("input[name='morningOrNight']:checked").value;
-  const movieGenre = document.querySelector("input[name='movieGenre']:checked").value;
-  const fav = document.querySelector("input[name='season']:checked").value;
 }
 
 window.addEventListener("load", function() {
@@ -25,22 +21,17 @@ window.onload = function() {
     event.preventDefault();
     hideResults();
     const holdBreath = parseInt(document.querySelector("input#holdBreath").value);
+    const favColor = document.querySelector("input[name='favColor']:checked").value;
+    const morningOrNight = document.querySelector("input[name='morningOrNight']:checked").value;
+    const movieGenre = document.querySelector("input[name='movieGenre']:checked").value;
+    const fav = document.querySelector("input[name='season']:checked").value;
 
-    // if (age && height) {
-    //   if (age >= 12 && height >= 60) {
-    //     document.getElementById("swings").removeAttribute("class");
-    //     document.getElementById("coaster").removeAttribute("class");
-    //     document.getElementById("tower").removeAttribute("class");
-    //   } else if (age >= 12 || height >= 48) {
-    //     document.getElementById("swings").removeAttribute("class");
-    //     document.getElementById("coaster").removeAttribute("class");
-    //   } else if (age >= 6) {
-    //     document.getElementById("swings").removeAttribute("class");
-    //   } else {
-    //     document.getElementById("sorry").removeAttribute("class");
-    //   }
-    // } else {
-    //   document.getElementById("error-message").removeAttribute("class");
-    // }
-  };
+      if (holdBreath >= 20 || favColor === "warmColor") {
+        document.getElementById("c#").removeAttribute("class");
+      } else if (holdBreath < 20) {
+        document.getElementById("ruby").removeAttribute("class");
+      } else if (favSeason === "fall") {
+        document.getElementById("javaScript").removeAttribute("class");
+      }
+  }
 };
